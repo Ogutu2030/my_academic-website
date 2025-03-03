@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Francis Ogutu - Academic Portfolio</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: white;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 85%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: blue;
+            color: white;
+            padding: 20px 0;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 20px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #ddd;
+        }
+        
+        /* Home Page Styles */
+        .home-content {
+            display: flex;
+            margin: 50px 0;
+            flex-wrap: wrap;
+        }
+        
+        .profile-section {
+            flex: 1;
+            min-width: 300px;
+            margin-right: 30px;
+        }
+        
+        .profile-pic-container {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: #e0e0e0;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .profile-pic {
+            max-width: 100%;
+            max-height: 100%;
+            display: none;
+        }
+        
+        
+        .info-section {
+            flex: 2;
+            min-width: 300px;
+        }
+        
+        /* Contact Page Styles */
+        .contact-page {
+            background-color:lightgrey; 
+            margin: 30px;
+            padding: 25px 0;
+            display: none;
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 35px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .form-buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .submit-btn {
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        
+        .cancel-btn {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        
+        /* Social Media Icons */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        
+        .social-icons a {
+            margin: 0 15px;
+            color: #333;
+            font-size: 24px;
+            transition: 0.3s;
+        }
+        
+        .social-icons a:hover {
+            transform: scale(1.2);
+        }
+        
+        /* CV Page Styles */
+        .cv-page {
+            padding: 50px 0;
+            display: none;
+        }
+        
+        .cv-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background:lightgray;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cv-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .cv-section {
+            margin-bottom: 30px;
+        }
+        
+        .cv-section h3 {
+            border-bottom: 2px solid blue;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .achievement-list, .education-list, .employment-list {
+            padding-left: 20px;
+        }
+        
+        .education-item, .employment-item {
+            margin-bottom: 15px;
+        }
+        
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+        
+        /* Active Page */
+        .active-page {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Eng.FRANCIS ODHIAMBO</div>
+                <ul class="nav-links">
+                    <li><a href="#" class="nav-link" data-page="home">Home</a></li>
+                    <li><a href="#" class="nav-link" data-page="cv">CV</a></li>
+                    <li><a href="#" class="nav-link" data-page="contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <!-- Home Page -->
+        <section id="home" class="home-page active-page">
+            <div class="container">
+                <h2>Welcome to My Academic Portfolio</h2>
+                <div class="home-content">
+                    <div class="profile-section">
+                        <div class="profile-pic-container">
+                            <img src="photos/IMG-20230416-WA0010~2.jpg" alt="Description of the image" >
+                    </div>
+                    <div class="info-section">
+                        <h3>About Me</h3>
+                        <p>I am a motivated, adaptable and responsible computing graduate seeking a position in an IT role which will utilize the professional and technical skills developed through past work experiences in this field. I have a methodical, customer-focused approach to work and a strong drive to see things through to completion.</p>
+                        <p>In my current job, I have managed the launch and migration of two major IT systems which was completed in time and within budget.</p>
+                        <div class="social-icons">
+                            <a href="#" title="Facebook"><i class="fab fa-facebook"></i>📘</a>
+                            <a href="#" title="Twitter"><i class="fab fa-twitter"></i>🐦</a>
+                            <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i>📱</a>
+                            <a href="#" title="Instagram"><i class="fab fa-instagram"></i>📷</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CV Page -->
+        <section id="cv" class="cv-page">
+            <div class="container">
+                <div class="cv-content">
+                    <div class="cv-header">
+                        <h2>CURRICULUM VITAE (CV)</h2>
+                        <h3>ODHIAMBO FRANCIS OGUTU</h3>
+                        <p>40100 Kisumu City, Ahero4321K</p>
+                        <p>Mobile: +254799598915 / +254759157686</p>
+                        <p>E-mail: francisogutu2030@gmail.com</p>
+                    </div>
+                    
+                    <div class="cv-section">
+                        <h3>Personal Profile Statement</h3>
+                        <p>A motivated, adaptable and responsible computing graduate seeking a position in as IT position which will utilize the professional and technical skills developed through past work experiences in this field. I have a methodical, customer-focused approach to work and a strong drive to see things through to completion. In my current job, I have managed the launch and migration of two major IT systems which was completed in time and within budget.</p>
+                    </div>
+                    
+                    <div class="cv-section">
+                        <h3>Achievements</h3>
+                        <ul class="achievement-list">
+                            <li>Implementing major systems with zero downtime.</li>
+                            <li>Employee of the month for two consecutive months.</li>
+                            <li>Member of Java Kenya Computing Society.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="cv-section">
+                        <h3>Education</h3>
+                        <div class="education-list">
+                            <div class="education-item">
+                                <p><strong>2021 – present:</strong> BSc Information Technology (BIT) Kibabii University</p>
+                                <p>Relevant modules:</p>
+                                <ul>
+                                    <li>Data modelling and database systems (68%)</li>
+                                    <li>Understanding information systems (75%)</li>
+                                    <li>Data analysis and data security (55%)</li>
+                                    <li>Software applications (95%)</li>
+                                </ul>
+                            </div>
+                            <div class="education-item">
+                                <p><strong>24th FEBRUARY, 2025 – 15th APRIL, 2025:</strong> Power Learning Project Scholarship</p>
+                                <ul>
+                                    <li>Certification in Software Development</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cv-section">
+                        <h3>Employment</h3>
+                        <div class="employment-list">
+                            <div class="employment-item">
+                                <p><strong>5th May - 24th August (2023):</strong> System Vendor, Java House Nairobi</p>
+                                <ul>
+                                    <li>Provided necessary requirements i.e. software for the system.</li>
+                                    <li>Researched, configured and installed new computer systems.</li>
+                                </ul>
+                            </div>
+                            <div class="employment-item">
+                                <p><strong>25th December 2023 – 2nd February 2024:</strong> IT Support Officer, Gateway Programming Languages Nairobi</p>
+                                <ul>
+                                    <li>Provided extensive IT support to internal and external stakeholders.</li>
+                                    <li>Installed and configured computer hardware operating systems applications.</li>
+                                    <li>Monitored and maintained computer systems and networks.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cv-section">
+                        <h3>Qualifications</h3>
+                        <ul>
+                            <li>Development of an E-voting System based on BlockChain Technology</li>
+                            <li>PLP certification in software development</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="cv-section">
+                        <h3>Skills</h3>
+                        <ul>
+                            <li>Intermediate knowledge of a variety of programming languages including Java, Python, C, JavaScript, PHP and SQL.</li>
+                            <li>Expert in networking fault diagnostics and troubleshooting, cisco routers and switching configuration and technologies.</li>
+                            <li>Strong troubleshooting skills with software and network products.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="cv-section">
+                        <h3>Hobbies and Interests</h3>
+                        <p>I enjoy reading non-fiction books, building computer networks, solving puzzles and socializing with friends and family.</p>
+                    </div>
+                    
+                    <div class="cv-section">
+                        <h3>References</h3>
+                        <div class="reference-item">
+                            <p><strong>Dr. Maloba</strong></p>
+                            <p>IT executive</p>
+                            <p>Java House Nairobi</p>
+                            <p>Address: 50990-00100 Nairobi</p>
+                            <p>Tel: +254759055897</p>
+                            <p>Email: drmaloba@java.co.ke</p>
+                        </div>
+                        <br>
+                        <div class="reference-item">
+                            <p><strong>Mrs. Kariuki</strong></p>
+                            <p>Senior IT Analyst</p>
+                            <p>Gateway programming Languages Nairobi</p>
+                            <p>Address: 00100 Nairobi</p>
+                            <p>Tel: +254780569825</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Page -->
+        <section id="contact" class="contact-page">
+            <div class="container">
+                <div class="contact-form">
+                    <h2>Contact Me</h2>
+                    <div class="form-group">
+                        <label for="firstName">First Name:</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="submit" class="submit-btn">Submit</button>
+                        <button type="button" class="cancel-btn">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p><strong>CURRICULUM VITUM (CV)</strong></p>
+            <p>&copy; 2025 <em>Odhiambo Francis Ogutu. All rights reserved.</em></p>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation functionality
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Hide all pages
+                document.querySelectorAll('section').forEach(section => {
+                    section.classList.remove('active-page');
+                });
+                
+                // Show the selected page
+                const pageId = this.getAttribute('data-page');
+                document.getElementById(pageId).classList.add('active-page');
+            });
+        });
+        
+        // Profile picture upload functionality
+        document.getElementById('upload-trigger').addEventListener('click', function() {
+            document.getElementById('pic-upload').click();
+        });
+        
+        document.getElementById('pic-upload').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    const profilePic = document.getElementById('profile-pic');
+                    profilePic.src = event.target.result;
+                    profilePic.style.display = 'block';
+                    document.getElementById('upload-text').style.display = 'none';
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+        
+        // Contact form functionality
+        document.querySelector('.submit-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // Basic validation
+            if (!firstName || !lastName || !phone || !email || !message) {
+                alert('Please fill in all fields');
+                return;
+            }
+            
+            // Form submission logic would go here
+            alert('Message sent successfully!');
+            
+            // Clear form
+            document.getElementById('firstName').value = '';
+            document.getElementById('lastName').value = '';
+            document.getElementById('phone').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('message').value = '';
+        });
+        
+        document.querySelector('.cancel-btn').addEventListener('click', function() {
+            // Clear form
+            document.getElementById('firstName').value = '';
+            document.getElementById('lastName').value = '';
+            document.getElementById('phone').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('message').value = '';
+        });
+    </script>
+</body>
+</html>
